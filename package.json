@@ -8,10 +8,26 @@
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
+    "debug": "^2.6.8",
+    "ejs": "^2.5.6",
     "express": "~4.15.2",
-    "jade": "~1.11.0",
+    "express-session": "^1.15.3",
     "morgan": "~1.8.1",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "description": "my blog",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangfeng102/node_blog.git"
+  },
+  "author": "tangfeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tangfeng102/node_blog/issues"
+  },
+  "homepage": "https://github.com/tangfeng102/node_blog#readme"
 }
