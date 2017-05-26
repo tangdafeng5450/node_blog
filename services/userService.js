@@ -21,11 +21,12 @@ exports.login = function (req,res,next){
     req_password = Crypto.createHash('md5').update(req_password).digest('hex');
     UserModel.findOne({
         where:{
-            username:req.body.username
+            username:req_username,
+            password:req_password
         }
     }).then(user => {
       if (!user) {
-        res.status(400).send("username or password invalid!");
+        res.send("invalid username or password!");
       }else{
         sess.username = user.dataValues.username;
         res.status(200).send("OK");
