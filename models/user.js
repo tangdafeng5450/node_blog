@@ -6,10 +6,10 @@ const User = sequelize.define('user',{
         autoIncrement: true,
         type: Sequelize.INTEGER
     },
-    first_name: {
+    username: {
       type: Sequelize.STRING
     },
-    last_name: {
+    password: {
         type: Sequelize.STRING
     }
   },
