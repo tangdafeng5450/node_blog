@@ -12,6 +12,9 @@ var UserModel = require('../models/user').User,
  */
 exports.login = function (req,res,next){
     var sess = req.session;
+    //clear session
+    sess.usrname = null;
+    sess.password = null;
     var req_password = req.body.password;
     var req_username = req.body.username;
     // MD5 Hash
@@ -22,10 +25,10 @@ exports.login = function (req,res,next){
         }
     }).then(user => {
       if (!user) {
-        console.log("username or password invalid!");
+        res.status(400).send("username or password invalid!");
       }else{
-        sess.username = user.username;
-        res.status(200).render('index');
+        sess.username = user.dataValues.username;
+        res.status(200).send("OK");
       }
     });
 };

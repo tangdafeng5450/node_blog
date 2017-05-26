@@ -7,11 +7,11 @@ var userService = require('../services/userService');
 router.post('/login', userService.login);
 
 /* 所有请求都过滤一遍 */
-router.all('*', filterService.loginAuthorize);
+router.all('*',filterService.loginAuthorize);
 
-/* GET home page. */
+/* GET blog list page. */
 router.get('/', function (req, res, next) {
-  res.render("index");
+  res.render("blog/blog_list");
 });
 
 module.exports = router;

@@ -23,7 +23,7 @@
                         location.href = '/';
                     },
                     error: function(response){
-                        console.log(response);
+                        $("#loginErrMsg").html(response);
                     }
                 });
             }
@@ -63,8 +63,12 @@
                             </div>
                             <!--注册-->
                             <div class="form-group">
-                                <button type="submit" class="btn btn-info btn-block" id="register">注册</button>
+                                <button type="submit" class="btn btn-warning btn-block" id="register">注册</button>
                             </div>
+                        </div>
+                        <!--面板footer-->
+                        <div class="panle-footer" id="loginErrMsg">
+                             <p class="tc">footer</p>
                         </div>
                     </div>
                  </fieldset>
